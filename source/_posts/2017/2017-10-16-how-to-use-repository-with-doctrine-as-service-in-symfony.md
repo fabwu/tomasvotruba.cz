@@ -57,7 +57,7 @@ final class PostRepository extends EntityRepository
      *
      * @return Post[]
      */
-    public function findPostsByAuthor(int $authorId): array
+    public function PostsByAuthor(int $authorId): array
     {
         return $this->findBy([
             'author' => $authorId
@@ -374,7 +374,7 @@ final class PostRepository
         $this->postSorter = $postSorter;
     }
 
-    public function find(int $id): Post
+    public function find(int $id): ?Post
     {
         return $this->repository->find($id);
     }
